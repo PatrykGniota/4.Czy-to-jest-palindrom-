@@ -3,7 +3,8 @@ using namespace std;
 
 int main() {
 
-  string word = "kajak";
+  int n =1221;
+  string word = to_string(n);
   bool isPalindrom = true;
 
   for(int i = 0; i < word.size() / 2 ; i++){
