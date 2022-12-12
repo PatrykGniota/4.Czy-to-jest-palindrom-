@@ -10,7 +10,7 @@ int main() {
   
   //Deklaracja zmiennych
   
-  string s = "Ala ma kota, a kot ma Ale";
+  string s = "Ala ma kota, a kot ma Ale "; //Notka: dodać spacje po ostatnim wyrazie
   string temp = "";
   string word = "";
   bool isPalindrom = true;
