@@ -7,21 +7,30 @@ using namespace std;
 
 
 int main() {
-
+  
+  //Deklaracja zmiennych
+  
   string s = "Ala ma kota, a kot ma Ale";
   string temp = "";
   string word = "";
   bool isPalindrom = true;
-
+  
+  //Zamiana na Wielkie litery
+  
   for(int i = 0; i < s.size(); i++){
     s[i] = toupper(s[i]);
   }
 
+  //Usuwanie zbędnych znaków
+  
   for(int i = 0; i < s.size(); i++){
     if((s[i] >= 'A' && s[i] <= 'Z') || isspace(s[i])){
       temp += s[i];      
     }
-   }
+  }
+
+  //Dzielenie na słowa i sprawdzanie palindromowości
+  
   for(int j = 0; j < temp.size(); j++){
     if(not isspace(temp[j])){
     word += temp[j];
@@ -46,7 +55,6 @@ int main() {
       cout << "Not Palindrom\n";
       word = "";
     }
-
     }
   }
 }
