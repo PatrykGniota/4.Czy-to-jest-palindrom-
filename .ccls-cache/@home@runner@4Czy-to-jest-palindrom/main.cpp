@@ -9,13 +9,25 @@ using namespace std;
 int main() {
   
   //Deklaracja zmiennych
-  
-  string s = "Ala ma kota, a kot ma Ale "; //Notka: dodać spacje po ostatnim wyrazie
+  bool isPalindrom = true;
+  string s = "kajak "; //Notka: dodać spacje po ostatnim wyrazie
 
   while(s.size()){
     int space = s.find(' ');
     string word = s.substr(0,space);
-    cout << word <<endl; // isPalindro,
+    cout << word + ' ';
+    for(int i = 0, k = word.size() - 1; i  <= k; i++, k--){
+      if(word[i] != word[k]){
+        isPalindrom = false;
+        break;
+      }
+    }
+    if(isPalindrom){
+      cout << "Palindrom\n";
+    }
+    else{
+      cout << "Not Palindrom\n";
+    }
     s.erase(0,space + 1);
   }
   
